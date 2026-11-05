@@ -47,8 +47,7 @@ async def handle_link(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 if __name__ == '__main__':
     # Make sure to put your actual BotFather token here for local testing
-    TOKEN = os.getenv("BOT_TOKEN", "9204076637:AAG3hHEe3eJ3swNM-N97-tRQA9GOgCypvLE")
-    
+    TOKEN = os.getenv("BOT_TOKEN", "YOUR_BOT_TOKEN_HERE")    
     app = ApplicationBuilder().token(TOKEN).build()
     app.add_handler(MessageHandler(filters.TEXT & (~filters.COMMAND), handle_link))
     print("Bot is starting locally...")
